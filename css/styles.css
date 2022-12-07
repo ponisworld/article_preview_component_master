@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desatured-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.01rem;
+    line-height: 1.5;
+}
+
+html {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+}
+
+main {
+    margin: 15vw auto;
+    width: 75vw;
+    max-width: 730px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main > div > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin: 0 2.25rem 1rem 2.25rem;
+}
+
+p {
+    color: var(--desatured-dark-blue);
+    margin: 0 2.25rem 0 2.25rem;
+}
+
+time {
+    color: var(--grayish-blue);
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+}
+
+main article {
+    margin: 2.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+main section > img {
+    max-width: 3.5rem;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+}
+
+main section div#dateAuthor {
+    margin-left: 1rem;
+    flex-basis: 70%;
+}
+
+main section button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    color: hsl(217, 19%, 35%);
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+footer {
+    margin: 5rem auto 2rem auto;
+    text-align: center;
+}
+
+#author {
+    position: relative;
+}
+
+.toggle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.toggle button {
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.toggle div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.toggle p {
+    color: hsl(212, 23%, 69%);
+    margin-left: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.toggle img {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr;
+        overflow:visible;
+    }
+
+    main > div {
+        grid-area: 1/1/2/2;
+    }
+
+    main > div > img {
+        height: 100%;
+        max-height: max-content;
+        border-radius: 10px 0 0 10px;
+    }
+
+    main > article {
+        grid-area: 1/2/2/3;
+    }
+
+    button#mainBtn {
+        display: inline-block;
+    }
+
+    #block button {
+        display: none;
+    }
+
+    .toggle {
+        position: absolute;
+        width: fit-content;
+        height: 4.5rem;
+        bottom: 5rem;
+        left: 14vw;
+        border-radius: 10px;
+        padding: 0.2rem 1.5rem 0 0;
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+    .toggle {
+        left: calc(15vw + 5rem);
+    }
+}
